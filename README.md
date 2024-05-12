@@ -10,7 +10,10 @@ Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.
 
 ### Pergunta 01 Goolge AI Studio: 
 
-<p>Com base em api pública, construir um dicionário na linguagem python, utilizando como referência  o endpoint http://servicos.cptec.inpe.br/XML/listaCidades?city=var_city , no endpoint foi informado "var_city" isto é uma variavel a ser informado por input antes de realizar a consulta no endpoint.</p>
+```
+
+Com base em api pública, construir um dicionário na linguagem python, utilizando como referência  o endpoint http://servicos.cptec.inpe.br/XML/listaCidades?city=var_city , no endpoint foi informado "var_city" isto é uma variavel a ser informado por input antes de realizar a consulta no endpoint.
+```
 
 <p>Observação: O código apresentado já atendeu o que imaginei</p>
 
@@ -32,8 +35,10 @@ ID: 5021, Nome: São Paulo do Potengi, UF: RN
 
 <p>Observação: A ideia do codigo atendeu a expectativa, portém a biblioteca utlizada para execuar o parser no XML não exibia o resultado</p>
 
-<p>Retorno ao executar o código </p>
+<p>Retorno ao executar o código: </p>
+
 ```
+
 Digite o ID da cidade para mais informações: 1433
 Previsão do tempo para os próximos 7 dias:
 Data: 2024-05-12
@@ -66,6 +71,7 @@ Tempo: Chuva
 Temperatura mínima: 24
 Temperatura máxima: 30
 ```
+
 
 ## Adaptações no código python
 
