@@ -27,7 +27,7 @@ ID: 5020, Nome: São Paulo de Olivença, UF: AM
 ID: 5021, Nome: São Paulo do Potengi, UF: RN
 ```
 
-<p>O código apresentado para pergunta 1 já atendeu o que imaginei</p>
+<p>O código apresentado para pergunta 1 já atendeu o esperado.</p>
 
 
 ### Pergunta 02 ao Google AI Studio:
