@@ -15,7 +15,6 @@ Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.
 Com base em api pública, construir um dicionário na linguagem python, utilizando como referência  o endpoint http://servicos.cptec.inpe.br/XML/listaCidades?city=var_city , no endpoint foi informado "var_city" isto é uma variavel a ser informado por input antes de realizar a consulta no endpoint.
 ```
 
-<p>Observação: O código apresentado já atendeu o que imaginei</p>
 
 <p>Retorno ao executar o código:</p>
 
@@ -28,12 +27,14 @@ ID: 5020, Nome: São Paulo de Olivença, UF: AM
 ID: 5021, Nome: São Paulo do Potengi, UF: RN
 ```
 
+<p>O código apresentado para pergunta 1 já atendeu o que imaginei</p>
+
 
 ### Pergunta 02 ao Google AI Studio:
 
-<p>Logo após executar a instrução for, inserir um novo input solicitando o id da cidade</p>
-
-<p>Observação: A ideia do codigo atendeu a expectativa, portém a biblioteca utlizada para execuar o parser no XML não exibia o resultado</p>
+```
+Logo após executar a instrução for, inserir um novo input solicitando o id da cidade
+```
 
 <p>Retorno ao executar o código: </p>
 
@@ -71,6 +72,9 @@ Tempo: Chuva
 Temperatura mínima: 24
 Temperatura máxima: 30
 ```
+
+
+<p>Observação: A ideia do codigo atendeu a expectativa, portém a biblioteca utlizada para execuar o parser no XML não exibia o resultado</p>
 
 
 ## Adaptações no código python
