@@ -168,6 +168,6 @@ Resposta:
 
 <p> Assustador como a ferramenta desenvolveu a ideia do ChatBox junto com a Lingaugem Python.</p>
 <p> Com as instruções no prompt do Google IA Studiom e testes realizados no Google COLAB</p>
-<p> Tenho conhecimento de desenvolvimento de sistemas, mas nem um conhecimento avançado na linguagem Python.</p>
+<p> Tenho conhecimento de desenvolvimento de sistemas, mas nenhum conhecimento avançado na linguagem Python.</p>
 <p> E a Cereja do Bolo é o retorno da Inteligçencia Artificial do Google, avaliando os dados informados </p>
 <p> Projeto concluido </p>.
