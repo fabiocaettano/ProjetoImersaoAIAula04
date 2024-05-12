@@ -68,9 +68,13 @@ Temperatura máxima:
 ### 3.3.2 Tradução do sigla Tempo
 
 <p>No retorno da consulta a chave tempo retorna uma flag.</p>
-<p>No site do INEP, localizei uma tabela com chave e valor.</p>
-<p>Importei esta tabela para o Google AI STUDIO e fiz a seguinte requisições:</p>
-<p>Com base no arquivo importado, criar um dicionário na linguagem python.</p>
+<p>No site do INEP, localizei uma tabela com chave e valor, e criei um arquivo no formato xlsx.</p>
+<p>Importei este arquivo para o Google AI STUDIO e fiz a seguinte pergunta:</p>
+
+```
+Com base no arquivo importado, criar um dicionário na linguagem python
+```
+
 <p>O Google AI Studio retornou o solicitado.</p>
 <p>E retornou com um exemplo para recuperar o valor da chave: description = weather_dict[abbreviation]</p>
 <p>Colei o dicionário no código.</p>
