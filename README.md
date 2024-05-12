@@ -1,6 +1,11 @@
 # Projeto Imersao AI Aula 04
 
-## Objetivo 
+Imersão na inteligência artificial no Gemini e a IA do Googe.
+Realizada em 2024 pela a Alura e o Google.
+Desafio, criar um projeto utilizando estas ferramentas.
+
+
+## Projeto para participar do desafio
 Criar um Chat Box para pesquisa climática dos últimos 7 dias conforme a cidade pesquisada.
 
 ## Fonte de Dados 
@@ -138,3 +143,11 @@ Temperatura mínima: 22
 Temperatura máxima: 32
 --------------------------------------------
 ```
+
+
+## Conclusão
+
+<p> Assustador como a ferramenta desenvolveu a ideia do ChatBox junto com a Lingaugem Python.</p>
+<p> Com as instruções no prompt do Google IA Studiom e testes realizados no Google COLAB</p>
+<p> Tenho conhecimento de desenvolvimento de sistemas, mas não conhecço a linguagem Python.</p>
+<p> Projeto concluido </p>.
