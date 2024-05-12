@@ -4,7 +4,7 @@
 Criar um Chat Box para pesquisa climática dos últimos 7 dias conforme a cidade pesquisada.
 
 ## Fonte de Dados 
-Utilizado API pública do Instituto Nacional de pesquisas espaciais o INPE.
+Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.
 
 ## Como foi construido o Chat Box
 
