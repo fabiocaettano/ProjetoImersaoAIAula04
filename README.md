@@ -16,12 +16,14 @@ Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.
 
 <p>Retorno ao executar o código:</p>
 ```
+
 Digite o nome da cidade: sao paulo
 Dicionário de cidades:
 ID: 244, Nome: São Paulo, UF: SP
 ID: 5019, Nome: São Paulo das Missões, UF: RS
 ID: 5020, Nome: São Paulo de Olivença, UF: AM
 ID: 5021, Nome: São Paulo do Potengi, UF: RN
+
 ```
 
 ### Pergunta 02 ao Google AI Studio:
