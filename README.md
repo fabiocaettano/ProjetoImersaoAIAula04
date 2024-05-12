@@ -1,15 +1,16 @@
 # Projeto Imersao AI Aula 04
 
-Imersão na inteligência artificial no Gemini e a IA do Googe.
-Realizada em 2024 pela a Alura e o Google.
-Desafio, criar um projeto utilizando estas ferramentas.
+<p>Imersão na inteligência artificial no Gemini e a IA do Googe.</p>
+<p></p>Realizada em 2024 pela a Alura e o Google.</p>
+<p></p>Desafio, criar um projeto utilizando estas ferramentas.</p>
 
 
 ## 1.0 Projeto para participar do desafio
-Criar um Chat Box para pesquisa climática dos últimos 7 dias conforme a cidade pesquisada.
+<p>Criar um Chat Box para pesquisa climática dos últimos 7 dias conforme a cidade pesquisada.</p>
+<p>E solicitar análise desses dados oara inteligência artifical do Google</p>
 
 ## 2.0 Fonte de Dados 
-Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.
+<p>Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.</p>
 
 ## 3.0 Como foi construido o Chat Box
 
