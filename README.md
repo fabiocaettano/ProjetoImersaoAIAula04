@@ -62,7 +62,7 @@ Temperatura máxima:
 ### 3.3.1 Parse no XML
 
 <p>No segundo input, o código python não retornava os resultados, exibia a chave mas não exibia o valor.</p>
-<p>Como não tenho muito conhecimento em Python, fiz um pesquisa e substitui a biblioteca "xml.etree.ElementTree" pela "xml.etree.ElementTree". Adaptei o for sugerido anteriormente.</p>
+<p>Como não tenho muito conhecimento em Python, fiz um pesquisa e substitui a biblioteca para "xml.etree.ElementTree". E adaptei o "for" sugerido anteriormente.</p>
 
 
 ### 3.3.2 Tradução do sigla Tempo
