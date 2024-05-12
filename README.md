@@ -5,15 +5,15 @@ Realizada em 2024 pela a Alura e o Google.
 Desafio, criar um projeto utilizando estas ferramentas.
 
 
-## Projeto para participar do desafio
+## 1.0 Projeto para participar do desafio
 Criar um Chat Box para pesquisa climática dos últimos 7 dias conforme a cidade pesquisada.
 
-## Fonte de Dados 
+## 2.0 Fonte de Dados 
 Utilizado uma API pública do Instituto Nacional de pesquisas espaciais o INPE.
 
-## Como foi construido o Chat Box
+## 3.0 Como foi construido o Chat Box
 
-### Pergunta 01 Goolge AI Studio: 
+### 3.1 Pergunta 01 Goolge AI Studio: 
 
 ```
 
@@ -35,7 +35,7 @@ ID: 5021, Nome: São Paulo do Potengi, UF: RN
 <p>O código apresentado para pergunta 1 já atendeu o esperado.</p>
 
 
-### Pergunta 02 ao Google AI Studio:
+### 3.2 Pergunta 02 ao Google AI Studio:
 
 ```
 Logo após executar a instrução for, inserir um novo input solicitando o id da cidade
@@ -56,15 +56,15 @@ Temperatura máxima:
 <p>Observação: A ideia do codigo atendeu a expectativa, portém a biblioteca utlizada para execuar o parser no XML não exibia o resultado</p>
 
 
-## Adaptações no código python
+### 3.3 Adaptações no código python
 
-### Parse no XML
+### 3.3.1 Parse no XML
 
 <p>No segundo input, o código python não retornava os resultados, exibia a chave mas não exibia o valor.</p>
 <p>Como não tenho muito conhecimento em Python, fiz um pesquisa e substitui a biblioteca "xml.etree.ElementTree" pela "xml.etree.ElementTree". Adaptei o for sugerido anteriormente.</p>
 
 
-### Tradução do sigla Tempo
+### 3.3.2 Tradução do sigla Tempo
 
 <p>No retorno da consulta a chave tempo retorna uma flag.</p>
 <p>No site do INEP, localizei uma tabela com chave e valor.</p>
@@ -82,8 +82,9 @@ elif child.tag == "tempo":
 ```
 
 
-## Como Funciona o CHATBOX
+## 4.0 Como Funciona o CHATBOX
 
+### Perguta 4.1
 <p>O CHATBOX faz uma pergunta sobre a cidade, o usuário deverá informar sem acentos</p>
 
 ```
@@ -101,47 +102,60 @@ Estado: RJ
 ID: 241
 ```
 
+### 4.2 Perguta 2
 <p>Agora o ChtaBox solicita o ID da cidade, pois na consulta pode retornar outras cidades></p>
 
 ```
 Digite o ID da cidade para mais informações: 241
 ```
 
-<p>Faz a segunda consulta em outro endpoint:</p>
+### 4.3 Analise do Gemini
+
+<p>No código python foi montada um pergunta sobre clima, com base no dicionário previsoes</p>
+<p>A variavep analise recebeu estas informações</p>
+<p>E faz a seguinte pergunta ao modelo, que varia conforme a consulta:</p>
 
 ```
+Gostaria de uma análise sobre a previsão do tempo conforme dados coletados no INPE : no dia 2024-05-12 com tempo Parcialmente Nublado e temperatura minima de 24 e temperatura máxima de 35; no dia 2024-05-13 com tempo Parcialmente Nublado e temperatura minima de 24 e temperatura máxima de 35; no dia 2024-05-14 com tempo Parcialmente Nublado e temperatura minima de 22 e temperatura máxima de 29; no dia 2024-05-15 com tempo Parcialmente Nublado e temperatura minima de 21 e temperatura máxima de 26; no dia 2024-05-16 com tempo Chuvas Isoladas e temperatura minima de 21 e temperatura máxima de 26; no dia 2024-05-17 com tempo Parcialmente Nublado e temperatura minima de 21 e temperatura máxima de 33; no dia 2024-05-18 com tempo Parcialmente Nublado e temperatura minima de 24 e temperatura máxima de 34;
+```
 
-Previsão do tempo para os próximos 7 dias:
-Data: 2024-05-12
-Tempo: Parcialmente Nublado
-Temperatura mínima: 23
-Temperatura máxima: 33
---------------------------------------------
-Data: 2024-05-13
-Tempo: Parcialmente Nublado
-Temperatura mínima: 24
-Temperatura máxima: 34
---------------------------------------------
-Data: 2024-05-14
-Tempo: Parcialmente Nublado
-Temperatura mínima: 22
-Temperatura máxima: 29
---------------------------------------------
-Data: 2024-05-15
-Tempo: Parcialmente Nublado
-Temperatura mínima: 21
-Temperatura máxima: 27
---------------------------------------------
-Data: 2024-05-16
-Tempo: Parcialmente Nublado
-Temperatura mínima: 21
-Temperatura máxima: 28
---------------------------------------------
-Data: 2024-05-17
-Tempo: Parcialmente Nublado
-Temperatura mínima: 22
-Temperatura máxima: 32
---------------------------------------------
+Com a configuração abaixo o modelo é acionado:
+
+```
+GOOGLE_API_KEY=''      
+genai.configure(api_key=GOOGLE_API_KEY)
+model = genai.GenerativeModel('gemini-pro')
+response = model.generate_content(analise)
+print(response.text)
+```
+
+
+Resposta:
+```
+**Análise da Previsão do Tempo para 2024-05-12 a 2024-05-18**
+
+**Tendências Gerais:**
+
+* Predominância de tempo parcialmente nublado com intervalos de sol.
+* Temperaturas estáveis, variando entre 21°C e 35°C.
+* Expectativa de chuvas isoladas no dia 16 de maio.
+
+**Previsão Diária:**
+
+* **12/05/2024 (Domingo):** Parcialmente nublado, temperatura mínima de 24°C e máxima de 35°C.
+* **13/05/2024 (Segunda-feira):** Parcialmente nublado, temperatura mínima de 24°C e máxima de 35°C.
+* **14/05/2024 (Terça-feira):** Parcialmente nublado, temperatura mínima de 22°C e máxima de 29°C.
+* **15/05/2024 (Quarta-feira):** Parcialmente nublado, temperatura mínima de 21°C e máxima de 26°C.
+* **16/05/2024 (Quinta-feira):** Chuvas isoladas, temperatura mínima de 21°C e máxima de 26°C.
+* **17/05/2024 (Sexta-feira):** Parcialmente nublado, temperatura mínima de 21°C e máxima de 33°C.
+* **18/05/2024 (Sábado):** Parcialmente nublado, temperatura mínima de 24°C e máxima de 34°C.
+
+**Observações:**
+
+* As temperaturas noturnas devem ser amenas, enquanto as temperaturas diurnas devem ser agradáveis.
+* O dia mais frio do período previsto é 15 de maio, com temperaturas máximas de 26°C.
+* O dia mais quente do período previsto é 13 de maio, com temperaturas máximas de 35°C.
+* A previsão é sujeita a alterações, especialmente com o passar do tempo.
 ```
 
 
@@ -149,5 +163,6 @@ Temperatura máxima: 32
 
 <p> Assustador como a ferramenta desenvolveu a ideia do ChatBox junto com a Lingaugem Python.</p>
 <p> Com as instruções no prompt do Google IA Studiom e testes realizados no Google COLAB</p>
-<p> Tenho conhecimento de desenvolvimento de sistemas, mas não conhecço a linguagem Python.</p>
+<p> Tenho conhecimento de desenvolvimento de sistemas, mas nem um conhecimento avançado na linguagem Python.</p>
+<p> E a Cereja do Bolo é o retorno da Inteligçencia Artificial do Google, avaliando os dados informados </p>
 <p> Projeto concluido </p>.
