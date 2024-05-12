@@ -108,7 +108,7 @@ ID: 241
 ```
 
 ### 4.2 Perguta 2
-<p>Agora o ChtaBox solicita o ID da cidade, pois na consulta pode retornar outras cidades></p>
+<p>Agora o ChtaBox solicita o ID da cidade, pois na consulta pode retornar outras cidades</p>
 
 ```
 Digite o ID da cidade para mais informações: 241
@@ -117,7 +117,7 @@ Digite o ID da cidade para mais informações: 241
 ### 4.3 Analise do Gemini
 
 <p>No código python foi montada um pergunta sobre clima, com base no dicionário previsoes</p>
-<p>A variavep analise recebeu estas informações</p>
+<p>A variavel analise recebeu estas informações</p>
 <p>E faz a seguinte pergunta ao modelo, que varia conforme a consulta:</p>
 
 ```
