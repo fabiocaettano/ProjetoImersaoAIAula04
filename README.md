@@ -42,44 +42,18 @@ Logo após executar a instrução for, inserir um novo input solicitando o id da
 
 Digite o ID da cidade para mais informações: 1433
 Previsão do tempo para os próximos 7 dias:
-Data: 2024-05-12
-Tempo: Parcialmente Nublado
-Temperatura mínima: 23
-Temperatura máxima: 31
---------------------------------------------
-Data: 2024-05-13
-Tempo: Chuvas Isoladas
-Temperatura mínima: 23
-Temperatura máxima: 32
---------------------------------------------
-Data: 2024-05-14
-Tempo: Parcialmente Nublado
-Temperatura mínima: 23
-Temperatura máxima: 32
---------------------------------------------
-Data: 2024-05-15
-Tempo: Chuvas Isoladas
-Temperatura mínima: 23
-Temperatura máxima: 32
---------------------------------------------
-Data: 2024-05-16
-Tempo: Chuvas Isoladas
-Temperatura mínima: 23
-Temperatura máxima: 33
---------------------------------------------
-Data: 2024-05-17
-Tempo: Chuva
-Temperatura mínima: 24
-Temperatura máxima: 30
+Data: 
+Tempo: 
+Temperatura mínima: 
+Temperatura máxima:
 ```
-
 
 <p>Observação: A ideia do codigo atendeu a expectativa, portém a biblioteca utlizada para execuar o parser no XML não exibia o resultado</p>
 
 
 ## Adaptações no código python
 
-### Parse no XMM
+### Parse no XML
 
 <p>No segundo input, o código python não retornava os resultados, exibia a chave mas não exibia o valor.</p>
 <p>Como não tenho muito conhecimento em Python, fiz um pesquisa e substitui a biblioteca "xml.etree.ElementTree" pela "xml.etree.ElementTree". Adaptei o for sugerido anteriormente.</p>
@@ -101,4 +75,64 @@ elif child.tag == "tempo":
 ```
 
 
+## Como Funciona o CHATBOX
 
+<p>O CHATBOX faz uma pergunta sobre a cidade, o usuário deverá informar sem acentos</p>
+
+```
+
+Digite o nome da cidade: rio de janeiro
+```
+
+<p>Ao informar o nome da cidade, envia a consulta para API e retorna com a seguinte informação:</p>
+
+```
+
+Dados climáticos:
+Cidade: Rio de Janeiro
+Estado: RJ
+ID: 241
+```
+
+<p>Agora o ChtaBox solicita o ID da cidade, pois na consulta pode retornar outras cidades></p>
+
+```
+Digite o ID da cidade para mais informações: 241
+```
+
+<p>Faz a segunda consulta em outro endpoint:</p>
+
+```
+
+Previsão do tempo para os próximos 7 dias:
+Data: 2024-05-12
+Tempo: Parcialmente Nublado
+Temperatura mínima: 23
+Temperatura máxima: 33
+--------------------------------------------
+Data: 2024-05-13
+Tempo: Parcialmente Nublado
+Temperatura mínima: 24
+Temperatura máxima: 34
+--------------------------------------------
+Data: 2024-05-14
+Tempo: Parcialmente Nublado
+Temperatura mínima: 22
+Temperatura máxima: 29
+--------------------------------------------
+Data: 2024-05-15
+Tempo: Parcialmente Nublado
+Temperatura mínima: 21
+Temperatura máxima: 27
+--------------------------------------------
+Data: 2024-05-16
+Tempo: Parcialmente Nublado
+Temperatura mínima: 21
+Temperatura máxima: 28
+--------------------------------------------
+Data: 2024-05-17
+Tempo: Parcialmente Nublado
+Temperatura mínima: 22
+Temperatura máxima: 32
+--------------------------------------------
+```
