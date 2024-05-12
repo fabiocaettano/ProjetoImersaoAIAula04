@@ -69,6 +69,8 @@ Temperatura máxima:
 <p>E retornou com um exemplo para recuperar o valor da chave: description = weather_dict[abbreviation]</p>
 <p>Colei o dicionário no código.</p>
 <p>E dentro do for substituir o retorno da flag, pelo seu valor ficando melhor para visualizar a situação do clima:</p>
+
+
 ```
 elif child.tag == "tempo":
   tempo = weather_dict[child.text]
